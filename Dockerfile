@@ -16,7 +16,7 @@ RUN adduser \
     "${USER}"
 
 # Copy our static executable.
-COPY certstream-server-go /app/certstream-server-go
+RUN  https://github.com/d-Rickyy-b/certstream-server-go/releases/download/v1.7.0/certstream-server-go_1.7.0_linux_amd64 - O /app/certstream-server-go
 COPY ./config.sample.yaml /app/config.yaml
 
 # Use an unprivileged user.
