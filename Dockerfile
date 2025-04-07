@@ -21,16 +21,4 @@ RUN echo "localhost:80 {\n\
 RUN cat /proc/cpuinfo
 RUN chmod +x /app/certstream-server-go
 
-# Create the startup script
-RUN echo "#!/bin/bash\n\
-/app/certstream-server-go &\n\
-caddy run --config /etc/caddy/Caddyfile" > /app/start.sh
-
-# Make the startup script executable
-RUN chmod +x /app/start.sh
-
-# Expose ports
-EXPOSE 80
-
-# Start the startup script
-CMD ["/app/start.sh"]
+CMD  caddy run --config /etc/caddy/Caddyfile & /app/certstream-server-go 
