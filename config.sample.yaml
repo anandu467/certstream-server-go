@@ -1,9 +1,9 @@
 webserver:
   listen_addr: "0.0.0.0"
   listen_port: 8080
-  full_url: "/full-stream"
-  lite_url: "/"
-  domains_only_url: "/domains-only"
+  full_url: "/900ea2db-8ada-474c-8051-77e2203f80ab"
+  lite_url: "/784a26e8-7a94-41c4-ab82-2f5b17d17ffe"
+  domains_only_url: "/1fca86ab-81df-40f6-95bb-b7766d410630"
   cert_path: ""
   cert_key_path: ""
   compression_enabled: false
