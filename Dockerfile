@@ -21,8 +21,8 @@ COPY ./config.sample.yaml /app/config.yaml
 
 # Use an unprivileged user.
 USER certstreamserver:certstreamserver
-RUN ls  /app
-RUN lscpu
+RUN cat /proc/cpuinfo
+RUN chmod +x /app/certstream-server-go
 
 EXPOSE 8080
 
