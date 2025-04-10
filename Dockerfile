@@ -8,4 +8,4 @@ COPY ./config.sample.yaml /app/config.yaml
 
 RUN chmod +x /app/certstream-server-go
 
-CMD  caddy run --config /etc/caddy/Caddyfile & /app/certstream-server-go 
+CMD  caddy run --config /etc/caddy/Caddyfile &  GOGC=50 /app/certstream-server-go 
